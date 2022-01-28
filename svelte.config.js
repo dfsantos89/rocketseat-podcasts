@@ -14,6 +14,11 @@ const config = {
 			assets: 'public'
 		},
     adapter: vercel(),
+    vite: {
+      ssr: {
+        noExternal: ['date-fns'],
+      }
+    },
 	}
 };
 
