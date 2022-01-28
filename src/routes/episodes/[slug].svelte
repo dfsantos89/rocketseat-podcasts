@@ -125,8 +125,8 @@
     import { api } from '../../services/api';
     import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
 
-    export async function load ({ page }) {
-        const { data } = await api.get(`/episodes/${page.params.slug}`);
+    export async function load ({ params }) {
+        const { data } = await api.get(`/episodes/${params.slug}`);
 
         const episode = {
             title: data.title,
